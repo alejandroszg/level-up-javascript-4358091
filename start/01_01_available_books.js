@@ -31,11 +31,3 @@ class Book {
 }
 
 const atomicHabits = new Book("Atomic Habits", "James Clear", 9783442178582, 50)
-
-console.log(atomicHabits.getAvailability());
-
-atomicHabits.restock(94);
-console.log(atomicHabits.getAvailability());
-
-atomicHabits.sell(144);
-console.log(atomicHabits.getAvailability());

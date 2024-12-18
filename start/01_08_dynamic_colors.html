@@ -18,6 +18,30 @@
 
   <script>
     // Write your code here
+    const body = document.querySelector('body');
+    let colorBtn = document.querySelectorAll('button');
+
+    colorBtn.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        changeColor(e.target.id);
+      });
+    });
+    
+    function changeColor(colorValue) {
+      switch(colorValue) {
+        case 'blue':
+          colorValue = '#0000ff';
+          break;
+        case 'pink':
+          colorValue = '#ffc0cb';
+          break;
+        case 'green':
+          colorValue = '#008000';
+          break;
+        default: '#000000'
+      }
+      body.style.backgroundColor = colorValue;
+    }
 
   </script>
 </body>

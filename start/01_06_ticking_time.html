@@ -16,7 +16,17 @@
 
   <script>
     // Write your code here
-    
+    let clock = document.querySelector('#clock');
+    function updateTime() {
+      let actualTime = new Date();
+      let hours = actualTime.getHours();
+      let minutes = actualTime.getMinutes();
+      let seconds = actualTime.getSeconds();
+      clock.innerHTML = `It's ${hours} hours with ${minutes} minutes and ${seconds} second/s`
+    }
+    setInterval(() => {
+      updateTime();
+    }, 1000)
   </script>
 </body>
 
